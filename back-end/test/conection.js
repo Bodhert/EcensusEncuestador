@@ -1,11 +1,24 @@
 "use strict";
-const moongose = require('mongoose');
+const mongoose = require('mongoose');
 
-moongose.connect('mongodb://localhost/ElectronicCensus', { useNewUrlParser: true });
+mongoose.Promise = global.Promise
 
-moongose.connection.once('open', function () {
-    console.log("conection ready");
-}).on('error', function (error) {
-    console.log('conection error:', error);
+before(function (done) {
+    mongoose.connect('mongodb://localhost/ElectronicCensus', { useNewUrlParser: true });
+    mongoose.connection.once('open', function () {
+        console.log("connection done ")
+        done();
+    }).on('error', function (error) {
+        console.log('connection error: ', error);
+    });
 });
+
+
+beforeEach(function (done) {
+    mongoose.connection.collections.ubications.drop(function () {
+        done();
+    });
+});
+
+
 
