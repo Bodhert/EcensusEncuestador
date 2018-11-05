@@ -9,24 +9,19 @@ const Ubication = require('../models/ubication');
 describe('GET /ubications', function () {
 
     beforeEach(function (done) {
-
         var ubication = new Ubication({
             latitude: "3333",
             longitude: "4444"
         });
-
         ubication.save().then(function () {
             var ubication2 = new Ubication({
                 latitude: "5454",
                 longitude: "6777"
             });
-
             ubication2.save().then(function () {
                 done();
             });
         });
-
-
     });
 
     it('should bring all the ubications', function (done) {
