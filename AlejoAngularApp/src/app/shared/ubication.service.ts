@@ -12,6 +12,12 @@ import { Ubication } from './ubication.model';
 export class UbicationService {
   selectedUbication: Ubication;
   ubications: Ubication[];
+  readonly baseURL = 'http//localhost:3000/ubications' // NOTE: this is the line to change for the real url 
 
-  constructor() { }
+
+  constructor(private http: HttpClient) { }
+
+  // getAllUbications(){
+  //   return this.http.get.(this.baseURL);
+  // }
 }

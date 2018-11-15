@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { UbicationService } from '../shared/ubication.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-ubication',
@@ -15,4 +16,7 @@ export class UbicationComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit(form : NgForm){
+    
+  }
 }

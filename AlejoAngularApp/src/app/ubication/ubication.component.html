@@ -3,7 +3,20 @@
     <div class="card">
       <div class="card-content white-text">
         <div class="row">
-          
+          <div class="col s5">
+            <table class="responsive-table highlight">
+              <thead>
+                <tr>
+                  <th>latitud</th>
+                  <th>longitud</th>
+                </tr >
+              </thead>
+              <tr *ngFor="let ubi of UbicationService.ubications">
+                <td>{{ubi.latitude}}</td>
+                <td>{{ubi.longitude}}</td>
+              </tr>
+            </table>
+          </div>
         </div>
       </div>
     </div>
