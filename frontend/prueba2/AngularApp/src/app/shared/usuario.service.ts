@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpRequest } from '@angular/common/http';
 import { FormsModule }   from '@angular/forms';
 //import "rxjs";
 //import { map, filter, switchMap } from 'rxjs/operators';
@@ -19,6 +19,17 @@ export class UsuarioService {
 
   selectUsuario: Usuario;
   usuarios: Usuario[];
+  readonly baseURL = 'http://localhost:3000/ubications'
 
-  constructor() { }
+  constructor(private http : HttpClient) { }
+ // constructor() { }
+
+ // postUsuario(usr : Usuario){
+ //  return this.http.post(this.baseURL, usr);
+ // }
+
+ getUsuario(){
+  return this.http.get(this.baseURL);
+ }
+
 }

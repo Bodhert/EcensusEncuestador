@@ -15,6 +15,7 @@ export class UsuarioComponent implements OnInit {
 
   ngOnInit() {
     this.resetForm();
+    this.obtenerUbications();
   }
 
   //modificacion
@@ -35,6 +36,14 @@ export class UsuarioComponent implements OnInit {
   //onsubmit sale del nombre principal del formulario
   onSubmit(form: NgForm){
    // this.usuarioService.postUsuario(form.value);
+  }
+
+  obtenerUbications(){
+    this.usuarioService.getUsuario().subscribe((res) => {
+      this.usuarioService.usuarios=res as Usuario[];
+      console.log("hola")
+
+    });
   }
 
   

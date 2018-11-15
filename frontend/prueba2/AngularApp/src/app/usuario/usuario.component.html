@@ -62,6 +62,23 @@
             <h1>Hola1</h1>
           </div>
 
+          <div class="col s5">
+            <table class="responsive-table highlight">
+              <thead>
+                <tr>
+                  <th>latitud</th>
+                  <th>longitud</th>
+                </tr >
+              </thead>
+              <tr *ngFor="let ubi of usuarioService.usuarios">
+                <td>{{ubi.latitude}}</td>
+                <td>{{ubi.longitude}}</td>
+              </tr>
+            </table>
+          </div>
+
+
+
         </div>
       </div>
     </div>
