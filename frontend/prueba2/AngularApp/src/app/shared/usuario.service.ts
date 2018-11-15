@@ -28,8 +28,11 @@ export class UsuarioService {
  //  return this.http.post(this.baseURL, usr);
  // }
 
- getUsuario(){
+ getUbicacion(){
   return this.http.get(this.baseURL);
  }
+
+
+
 
 }

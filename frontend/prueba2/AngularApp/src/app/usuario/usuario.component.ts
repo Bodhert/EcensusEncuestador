@@ -39,7 +39,7 @@ export class UsuarioComponent implements OnInit {
   }
 
   obtenerUbications(){
-    this.usuarioService.getUsuario().subscribe((res) => {
+    this.usuarioService.getUbicacion().subscribe((res) => {
       this.usuarioService.usuarios=res as Usuario[];
       console.log("hola")
 

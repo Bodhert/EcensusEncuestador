@@ -47,3 +47,15 @@ a.action-btn:hover{
     bottom: 10%;
     left:7%;
   }
+
+  agm-map {
+    height: 300px;
+    width: 100%;
+  }
+.letra-mapa{
+	font-size : 30px;
+	color : #068587;
+	color : rgba(6, 133, 135, 1);
+  text-align: center;
+
+}
