@@ -1,39 +1,69 @@
 <div class="row">
-  <div class="col s12">
+  <div class="col s12 m6">
     <div class="card">
       <div class="card-content white-text">
-
         <div class="row">
-          <div  class="col s5">
-              <form #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm)">
-                <input type="hidden" name="_id" #_id="ngModel"[(ngModel)]="usuarioService.selectUsuario._id">
-                  <div class="row">
-                      <div class="input-field col s12">
-                      <input type="text" name="name" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.name" placeholder="hola a todos ingresa tu nombre">
-                      <label>ame : <label class="red-text">*</label>
+          <div class="col s5">
+            <h1>Hola</h1>
+            <form #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm)">
+
+            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="usuarioService.selectUsuario._id">
+             <div class="row">
+                <div class="input-field col s12">
+                <!-- required utiliza el css input.ng-invalid .ng.dirty-->
+                    <input type="text" name="name" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.name" placeholder="hola a todos ingresa tu nombre" required >
+                    <label>Nombre :
+                        <label class="red-text">*</label>
+                    </label>
+                </div>
+             </div>
+
+             <div class="row"> 
+                <div class="input-field col s12">
+                        <input type="text" name="position" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.position" placeholder=" ingresa tu pos" >
+                        <label>Posicion :
+                            <label class="red-text">*</label>
                         </label>
-                      
-                      </div>
-                  </div>
-                  <div class="input-field col s12">
-                      <input type="text" name="name" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.name" placeholder="hola a todos ingresa tu nombre">
-                      <label>ame : <label class="red-text">*</label>
-                        </label>
-                      
-                  </div>
-              </form>
+                </div>
+              </div>
+
+              <div class="row"> 
+                <div class="input-field col s12">
+                        <input type="text" name="office" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.office" >
+                        <label>Office :</label>
+                </div>
+              </div>
+
+
+
+
+               <div class="row"> 
+                <div class="input-field col s12">
+                        <input type="text" name="salary" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.salary" >
+                        <label>Salario :</label>
+                </div>
+              </div>
+
+
+
+                <div class="row"> 
+                <div class="input-field col s12">
+                        <button class="btn btn-custom right" type="button" (click)="resetForm(usuarioForm)">Reset</button>
+                        <button class="btn btn-custom right" type="button" [disabled]="!usuarioForm.valid">Submit1</button>
+                </div>
+              </div>
+
+
+
+            </form>
           </div>
 
-          <div  class="col s7">
-
+          <div class="col s7">
+            <h1>Hola1</h1>
           </div>
-
-
 
         </div>
-
       </div>
     </div>
   </div>
-
 </div>
