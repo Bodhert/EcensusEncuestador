@@ -43,7 +43,4 @@ export class UsuarioComponent implements OnInit {
       this.usuarioService.usuarios=res as Usuario[];
     });
   }
-
-  
-
 }

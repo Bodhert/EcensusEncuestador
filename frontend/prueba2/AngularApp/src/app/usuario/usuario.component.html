@@ -56,26 +56,6 @@
 
             </form>
           </div>
-
-          <!-- Parte en la que se trae las ubicaciones con latitud y longitud de la bd-->
-          <div class="col s5">
-            <table class="responsive-table highlight">
-              <thead>
-                <tr>
-                  <th>latitud</th>
-                  <th>longitud</th>
-                </tr >
-              </thead>
-              <tr *ngFor="let ubi of usuarioService.usuarios">
-                <td>{{ubi.latitude}}</td>
-                <td>{{ubi.longitude}}</td>
-              </tr>
-            </table>
-          </div>
-          <!-- Termina parte en la que se trae las ubicaciones con latitud y longitud de la bd-->       
-
-
-
         </div>
       </div>
     </div>
