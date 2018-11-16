@@ -4,4 +4,5 @@ export class Usuario {
     position: string;
     office: string;
     salary: number;
+
 }

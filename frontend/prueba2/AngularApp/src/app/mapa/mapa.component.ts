@@ -1,10 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Marker } from '@agm/core/services/google-maps-types';
 
+import { NgForm } from '@angular/forms';
+import { UsuarioService } from '../shared/usuario.service';
+import { Usuario} from '../shared/usuario.model';
+
 @Component({
   selector: 'app-mapa',
   templateUrl: './mapa.component.html',
-  styleUrls: ['./mapa.component.css']
+  styleUrls: ['./mapa.component.css'],
+  providers: [UsuarioService]
 })
 export class MapaComponent implements OnInit {
 
@@ -17,9 +22,17 @@ export class MapaComponent implements OnInit {
   lng2: number= -75.582986;
   zoom: number = 16;
 
-  constructor() { }
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
+    this.obtenerUbications();
+  }
+
+
+  obtenerUbications(){
+    this.usuarioService.getUbicacion().subscribe((res) => {
+      this.usuarioService.usuarios=res as Usuario[];
+    });
   }
 
 }

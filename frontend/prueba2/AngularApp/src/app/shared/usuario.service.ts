@@ -32,7 +32,4 @@ export class UsuarioService {
   return this.http.get(this.baseURL);
  }
 
-
-
-
 }
