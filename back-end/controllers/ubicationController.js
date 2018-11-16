@@ -9,7 +9,7 @@ var router = express.Router();
 router.get('/', (req, res) => {
     Ubication.find((err, docs) => {
         if (!err) {
-            res.send({ location: docs });
+            res.send( docs );
             console.log(docs);
         } else {
             console.log('Error retrieving latitude and longitude' + JSON.stringify(err, undefined, 2));

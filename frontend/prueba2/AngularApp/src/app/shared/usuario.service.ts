@@ -29,6 +29,7 @@ export class UsuarioService {
  // }
 
  getUbicacion(){
+  console.log(" gdfkgdfskl");
   return this.http.get(this.baseURL);
  }
 

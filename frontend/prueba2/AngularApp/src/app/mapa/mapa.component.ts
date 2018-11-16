@@ -16,6 +16,13 @@ export class MapaComponent implements OnInit {
   number=[6.190872,-75.582664, 6.189987,-75.582986];
   title = 'googlemaps';
   title2: string = 'My first AGM project';
+  lat: number = 6.190872;
+  lng: number = -75.582664;
+  lat2: number = 6.189987;  
+  lng2: number= -75.582986;
+  zoom: number = 16;
+  defaultLatitude:Number = 6.199548;
+  defaultLongitude: Number = -75.57934;
   
 
   constructor(private usuarioService: UsuarioService) { }
@@ -24,6 +31,7 @@ export class MapaComponent implements OnInit {
     this.obtenerUbications();
 
     this.usuarioService.getUbicacion().subscribe(location => {
+      console.log(location);
       this.location = location['location'];
     },
       err => {

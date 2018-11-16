@@ -1,4 +1,8 @@
 
+
+
+
+
         <!--Aca ira la segunda parte del de la carta-->
         <div class="row " >
             <div class="col s7 m6">
@@ -10,8 +14,8 @@
                     <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
                         <agm-marker *ngFor="let ubi of usuarioService.usuarios"
                         
-                        [latitude]="ubi.lat"
-                            [longitude]="ubi.lng">  
+                        [latitude]="ubi.latitude"
+                        [longitude]="ubi.longitude">  
                         </agm-marker>
                   </agm-map>
                   </div>
@@ -42,6 +46,3 @@
          </div>
 
         <!-- Termina la seguna parte-->
-<div>
-  
-</div>
