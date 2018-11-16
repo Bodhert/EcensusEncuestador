@@ -12,8 +12,8 @@ describe('Ubication tests', function(){
 
     it('Saves a location with latitude and longitude', function(done){
         var ubication = new Ubication({
-            latitude: "3333",
-            longitude: "4444"
+            latitude: "6.193798",
+            longitude: "-75.581731"
         });
 
         ubication.save().then(function(){
