@@ -10,13 +10,13 @@ describe('GET /ubications', function () {
 
     beforeEach(function (done) {
         var ubication = new Ubication({
-            latitude: "3333",
-            longitude: "4444"
+            latitude: "6.193798",
+            longitude: "-75.581731"
         });
         ubication.save().then(function () {
             var ubication2 = new Ubication({
-                latitude: "5454",
-                longitude: "6777"
+                latitude: "6.193233",
+                longitude: "-75.581774"
             });
             ubication2.save().then(function () {
                 done();

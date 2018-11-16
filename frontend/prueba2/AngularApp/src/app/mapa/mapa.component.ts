@@ -9,7 +9,11 @@ import { Usuario} from '../shared/usuario.model';
   selector: 'app-mapa',
   templateUrl: './mapa.component.html',
   styleUrls: ['./mapa.component.css'],
+<<<<<<< HEAD
   providers: [UsuarioService]
+=======
+  providers: []
+>>>>>>> 73acabc7ec228907b9654c640924d3ac55812203
 })
 export class MapaComponent implements OnInit {
 
@@ -25,6 +29,7 @@ export class MapaComponent implements OnInit {
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit() {
+<<<<<<< HEAD
     this.obtenerUbications();
   }
 
@@ -33,6 +38,9 @@ export class MapaComponent implements OnInit {
     this.usuarioService.getUbicacion().subscribe((res) => {
       this.usuarioService.usuarios=res as Usuario[];
     });
+=======
+    console.log("hola")
+>>>>>>> 73acabc7ec228907b9654c640924d3ac55812203
   }
 
 }
