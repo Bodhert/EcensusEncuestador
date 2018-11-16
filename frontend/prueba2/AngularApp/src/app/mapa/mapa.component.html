@@ -1,16 +1,6 @@
-<!--aca va la parte del mapa-->
-
-
-  <div>
-   <!-- <h4 class="letra-mapa">Mapa</h4>
-   
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-      
-      {% comment %} <tr *ngFor="let ubi of usuarioService.usuarios">
-      <agm-marker [latitude]={{ubi.latitude}} [longitude]={{ubi.longitude}}></agm-marker>
-              </tr> {% endcomment %}
-    </agm-map>-->
+<div>
+  <h4 class="letra-mapa">Mapa</h4>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
 </div>
-
-    
-<!-- termina la parte del mapa-->

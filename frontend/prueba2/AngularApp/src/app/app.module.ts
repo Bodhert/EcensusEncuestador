@@ -12,8 +12,7 @@ import { AgmCoreModule } from '@agm/core';
   declarations: [
     AppComponent,
     UsuarioComponent,
-    MapaComponent
-    
+    MapaComponent,    
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,8 @@ import { Marker } from '@agm/core/services/google-maps-types';
 @Component({
   selector: 'app-mapa',
   templateUrl: './mapa.component.html',
-  styleUrls: ['./mapa.component.css']
+  styleUrls: ['./mapa.component.css'],
+  providers: []
 })
 export class MapaComponent implements OnInit {
 
@@ -20,6 +21,7 @@ export class MapaComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("hola")
   }
 
 }
