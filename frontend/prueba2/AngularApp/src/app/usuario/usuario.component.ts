@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm ,FormBuilder, FormGroup,FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { UsuarioService } from '../shared/usuario.service';
 import { Usuario} from '../shared/usuario.model';
 
@@ -31,6 +31,10 @@ export class UsuarioComponent implements OnInit {
       salary: null
     }
 
+  }
+
+  submit(){
+    console.log("hola");
   }
 
   //onsubmit sale del nombre principal del formulario

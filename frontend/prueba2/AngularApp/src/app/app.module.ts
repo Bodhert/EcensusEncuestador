@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { AgmCoreModule } from '@agm/core';
+import { PaginaComponent } from './pagina/pagina.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuarioComponent,
-    MapaComponent,    
+    MapaComponent,
+    PaginaComponent,    
   ],
   imports: [
     BrowserModule,
