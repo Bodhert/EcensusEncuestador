@@ -4,85 +4,67 @@
       <div class="card-content white-text">
         <div class="row">
           <div class="col s5">
-            <h1>Hola</h1>
+            <h1 class="text-align-center-Encuestador">Encuestador </h1>
             <form #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm)">
 
             <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="usuarioService.selectUsuario._id">
              <div class="row">
                 <div class="input-field col s12">
                 <!-- required utiliza el css input.ng-invalid .ng.dirty-->
-                    <input type="text" name="name" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.name" placeholder="hola a todos ingresa tu nombre" required >
+                    <input type="text" name="name" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.name"  required >
                     <label>Nombre :
                         <label class="red-text">*</label>
                     </label>
                 </div>
              </div>
 
+             <!--HOY-->
+             <div class="row">
+                <div class="input-field col s12">
+                <!-- required utiliza el css input.ng-invalid .ng.dirty-->
+                    <input type="text" name="name" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.name"  required >
+                    <label>Nombre :
+                        <label class="red-text">*</label>
+                    </label>
+                </div>
+             </div>
+
+
+
+
+             <!--Termina hoy-->
+             
+              <!--Segundo Campo-->
              <div class="row"> 
                 <div class="input-field col s12">
-                        <input type="text" name="position" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.position" placeholder=" ingresa tu pos" >
-                        <label>Posicion :
+                        <input type="text" name="position" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.position" required >
+                        <label>Direccion :
                             <label class="red-text">*</label>
                         </label>
                 </div>
               </div>
+              <!--Termina Segudo Campo-->
 
-              <div class="row"> 
-                <div class="input-field col s12">
-                        <input type="text" name="office" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.office" >
-                        <label>Office :</label>
-                </div>
-              </div>
-
-
-
-
-               <div class="row"> 
-                <div class="input-field col s12">
-                        <input type="text" name="salary" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.salary" >
-                        <label>Salario :</label>
-                </div>
-              </div>
-
-
-
+              <!--boton-->
                 <div class="row"> 
                 <div class="input-field col s12">
                         <button class="btn btn-custom right" type="button" (click)="resetForm(usuarioForm)">Reset</button>
                         <button class="btn btn-custom right" type="button" [disabled]="!usuarioForm.valid">Submit1</button>
                 </div>
               </div>
-
-
+              <!-- Termina boton-->
 
             </form>
           </div>
-
-          <div class="col s7">
-            <h1>Hola1</h1>
-          </div>
-<!-- Parte en la que se trae las ubicaciones con latitud y longitud de la bd-->
-          <div class="col s5">
-            <table class="responsive-table highlight">
-              <thead>
-                <tr>
-                  <th>latitud</th>
-                  <th>longitud</th>
-                </tr >
-              </thead>
-              <tr *ngFor="let ubi of usuarioService.usuarios">
-                <td>{{ubi.latitude}}</td>
-                <td>{{ubi.longitude}}</td>
-              </tr>
-            </table>
-          </div>
- <!-- Termina parte en la que se trae las ubicaciones con latitud y longitud de la bd-->       
-
-
-
         </div>
       </div>
     </div>
+   </div>
+<app-mapa></app-mapa>
     <div>
   </div>
 </div>
+
+
+
+

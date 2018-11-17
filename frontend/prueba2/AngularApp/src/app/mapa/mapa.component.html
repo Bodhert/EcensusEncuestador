@@ -1,6 +1,48 @@
-<div>
-  <h4 class="letra-mapa">Mapa</h4>
-  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map>
-</div>
+
+
+
+
+
+        <!--Aca ira la segunda parte del de la carta-->
+        <div class="row " >
+            <div class="col s7 m6">
+              <div class="card card2 ">
+                <div class="card-content ">
+                  <div class="row">
+                    <h1 class="example-margin">Mapa</h1>
+
+                    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+                        <agm-marker *ngFor="let ubi of usuarioService.usuarios"
+                        
+                        [latitude]="ubi.latitude"
+                        [longitude]="ubi.longitude">  
+                        </agm-marker>
+                  </agm-map>
+                  </div>
+                  <div>
+                      <h1>Marcadores a visitar</h1>
+                      <!-- Parte en la que se trae las ubicaciones con latitud y longitud de la bd-->
+                      <div class="col s5">
+                        <table class="responsive-table highlight">
+                          <thead>
+                            <tr>
+                              <th>latitud 1</th><br><br>
+                              <th>longitud</th>
+                            </tr >
+                          </thead>
+                          <tr *ngFor="let ubi of usuarioService.usuarios">
+                            <td>{{ubi.latitude}}</td>
+                            <td>{{ubi.longitude}}</td>
+                            
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  <!-- Termina parte en la que se trae las ubicaciones con latitud y longitud de la bd--> 
+
+                </div>
+              </div>
+          </div>
+         </div>
+
+        <!-- Termina la seguna parte-->

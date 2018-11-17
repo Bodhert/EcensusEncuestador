@@ -59,6 +59,10 @@ a.action-btn:hover{
   text-align: center;
 
 }
+.checkbox-color{
+    color : #068587;
+    color : rgba(6, 133, 135, 1);
+}
 
 .example-section {
     display: flex;
@@ -68,5 +72,29 @@ a.action-btn:hover{
   }
   
   .example-margin {
-    margin: 0 10px;
+    margin-top: 2px;
+    color : #fff;
+    color : rgba(253, 253, 253, 0.966);
   }
+
+.card2{
+      font-size : 16px;
+      text-align: center; 
+      width: 630px;
+      height: 90px;
+      margin-left: 150px;
+      text-align: center;
+}
+.text-align-center-Encuestador{
+    text-align: center;
+    margin-left: 190px;
+}
+
+.barra-principal{
+        font-family : 'Acherus Grotesque';
+        font-size : 16px;
+        text-align: center; 
+        width: 1653px;
+        margin-left: 10px;
+
+}
