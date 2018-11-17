@@ -9,13 +9,15 @@ import { UsuarioComponent } from './usuario/usuario.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { AgmCoreModule } from '@agm/core';
 import { PaginaComponent } from './pagina/pagina.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuarioComponent,
     MapaComponent,
-    PaginaComponent,    
+    PaginaComponent,
+    LoginComponent,    
   ],
   imports: [
     BrowserModule,

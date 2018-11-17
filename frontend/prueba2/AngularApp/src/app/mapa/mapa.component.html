@@ -28,12 +28,25 @@
                             <tr>
                               <th>latitud 1</th><br><br>
                               <th>longitud</th>
+                              <th></th>
 
                             </tr >
                           </thead>
                           <tr *ngFor="let ubi of usuarioService.usuarios">
                             <td>{{ubi.latitude}}</td>
+                            <th></th>
                             <td>{{ubi.longitude}}</td>
+                            <th></th>
+                            <td>   
+                            <form action="#">
+                                      <p>
+                                        <label>
+                                          <input type="checkbox"  />
+                                          <span>Visitada</span>
+                                        </label>
+                                      </p>
+                             </form>
+                            </td>
                             
                           </tr>
                         </table>

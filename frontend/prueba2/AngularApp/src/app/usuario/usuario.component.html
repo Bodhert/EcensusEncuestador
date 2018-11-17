@@ -7,37 +7,28 @@
             <h1 class="text-align-center-Encuestador">Encuestador </h1>
             <form #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm)">
 
+
             <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="usuarioService.selectUsuario._id">
              <div class="row">
                 <div class="input-field col s12">
-                <!-- required utiliza el css input.ng-invalid .ng.dirty-->
-                    <input type="text" name="name" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.name"  required >
+                <!-- required utiliza el css input.ng-invalid .ng.dirty  (click)="onBrake()"-->
+                    <input type="text" name="nombre" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.nombre"  required >
                     <label>Nombre :
                         <label class="red-text">*</label>
                     </label>
                 </div>
              </div>
 
-             <!--HOY-->
              <div class="row">
-             
+                <div class="input-field col s12">
+                <!-- required utiliza el css input.ng-invalid .ng.dirty-->
+                    <input type="text" name="direccion" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.direccion"  required >
+                    <label>Direccion :
+                        <label class="red-text">*</label>
+                    </label>
+                </div>
              </div>
              <!--Termina hoy-->
-             
-              <!--Segundo Campo-->
-             <div class="row"> 
-                <div class="input-field col s12">
-                        <input type="text" name="position" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.position" required >
-                <div class="input-field col s12">
-<label>Check me to check both: <input type="checkbox" ng-model="leader"></label><br/>
-<input id="checkFollower" type="checkbox" ng-checked="leader" >
-                </div>
-                        <label>Direccion :
-                            <label class="red-text">*</label>
-                        </label>
-                </div>
-              </div>
-              <!--Termina Segudo Campo-->
 
               <!--boton-->
                 <div class="row"> 
@@ -52,14 +43,47 @@
 
             </form>
           </div>
+          
         </div>
       </div>
+          <div class="col s7">
+              <table class="responsive-table highlight">
+                <thead>
+                  <tr>
+                  <th>Nombre</th>
+                  <th>Direccion</th>
+                  <th></th>
+
+                  </tr>
+                </thead>
+                <tr *ngFor="let usr of encuestadorService.encuestadores">
+                  <td>{{usr.name}}</td>
+                  <td>{{usr.nombre}}</td>
+                  <td>{{usr.direccion}}</td>
+                  <td>
+                  <a class="action-btn" (click)="onEdit(usr)">
+                      <i class="material-icons">edit</i>
+                  </a>
+
+                  <a class="action-btn" (click)="onDelete(usr._id,usuarioForm)">
+                      <i class="material-icons">delete</i>
+                  </a>
+                  </td>
+                </tr>
+              
+              </table>
+              </div>
     </div>
    </div>
 <app-mapa></app-mapa>
     <div>
     
   </div>
+</div>
+
+<div>
+
+
 </div>
 
 

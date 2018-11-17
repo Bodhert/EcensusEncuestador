@@ -20,17 +20,19 @@ export class UsuarioService {
   selectUsuario: Usuario;
   usuarios: Usuario[];
   readonly baseURL = 'http://localhost:3000/ubications'
+  readonly baseURLpersona = 'http://localhost:3000/ubications'
 
   constructor(private http : HttpClient) { }
  // constructor() { }
 
- // postUsuario(usr : Usuario){
- //  return this.http.post(this.baseURL, usr);
- // }
+  postUsuario(usr : Usuario){
+   return this.http.post(this.baseURL, usr);
+  }
 
  getUbicacion(){
   console.log(" gdfkgdfskl");
   return this.http.get(this.baseURL);
  }
+
 
 }

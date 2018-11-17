@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Marker } from '@agm/core/services/google-maps-types';
 import { NgForm } from '@angular/forms';
 
-import { MapaService } from '../shared/mapa.service';
-import {Mapa} from '../shared/mapa.model';
+//import { MapaService } from '../shared/mapa.service';
+//import {Mapa} from '../shared/mapa.model';
 import { UsuarioService } from '../shared/usuario.service';
 import { Usuario} from '../shared/usuario.model';
 
@@ -51,10 +51,4 @@ export class MapaComponent implements OnInit {
     });
   }
 
-  getAllUbications() {
-    this.mapaService.getUbicacions().subscribe((res) => {
-      this.mapaService.ubications = res as Mapa[];
-      console.log("debug");
-    });
-  }
 }
