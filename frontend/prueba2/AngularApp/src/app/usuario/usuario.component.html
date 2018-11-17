@@ -20,24 +20,18 @@
 
              <!--HOY-->
              <div class="row">
-                <div class="input-field col s12">
-                <!-- required utiliza el css input.ng-invalid .ng.dirty-->
-                    <input type="text" name="name" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.name"  required >
-                    <label>Nombre :
-                        <label class="red-text">*</label>
-                    </label>
-                </div>
+             
              </div>
-
-
-
-
              <!--Termina hoy-->
              
               <!--Segundo Campo-->
              <div class="row"> 
                 <div class="input-field col s12">
                         <input type="text" name="position" #name="ngModel" [(ngModel)]="usuarioService.selectUsuario.position" required >
+                <div class="input-field col s12">
+<label>Check me to check both: <input type="checkbox" ng-model="leader"></label><br/>
+<input id="checkFollower" type="checkbox" ng-checked="leader" >
+                </div>
                         <label>Direccion :
                             <label class="red-text">*</label>
                         </label>
@@ -50,6 +44,8 @@
                 <div class="input-field col s12">
                         <button class="btn btn-custom right" type="button" (click)="resetForm(usuarioForm)">Reset</button>
                         <button class="btn btn-custom right" type="button" [disabled]="!usuarioForm.valid">Submit1</button>
+                        <button class="btn btn-custom right" onCLick="window.location.href='/pagina'">hola</button>
+                        
                 </div>
               </div>
               <!-- Termina boton-->
@@ -62,6 +58,7 @@
    </div>
 <app-mapa></app-mapa>
     <div>
+    
   </div>
 </div>
 
