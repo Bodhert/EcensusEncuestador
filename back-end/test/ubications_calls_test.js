@@ -16,7 +16,7 @@ describe('GET /ubications', function () {
         });
         ubication.save().then(function () {
             var ubication2 = new Ubication({
-                name: "elKuberNea ",
+                name: "elKuberNea",
                 latitude: "6.193233",
                 longitude: "-75.581774"
             });
