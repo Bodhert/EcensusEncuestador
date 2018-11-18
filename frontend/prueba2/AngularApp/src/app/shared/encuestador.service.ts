@@ -29,6 +29,9 @@ export class EncuestadorService {
   }
  
   deleteUsuario(_id: string){
+    let temp: string = this.baseURL + `/${_id}`;
+    console.log(" borrando ");
+    console.log(temp);
     return this.http.delete(this.baseURL + `/${_id}`);
   }
 

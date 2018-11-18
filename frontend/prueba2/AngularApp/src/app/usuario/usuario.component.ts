@@ -84,9 +84,12 @@ export class UsuarioComponent implements OnInit {
     });
   }
 
-  onEdit(usr : Encuestador){
-
+  onEdit(usr : Encuestador, form:NgForm){
+    console.log("aqui e");
     this.encuestadorService.selectEncuestador = usr;
+    this.resetForm(form);
+    console.log("user");
+    console.log(usr);
     console.log(this.encuestadorService.selectEncuestador);
 
   }
