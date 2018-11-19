@@ -14,7 +14,7 @@ export class EncuestadorService {
 
   selectEncuestador: Encuestador;
   encuestadores: Encuestador[];
-  readonly baseURL = 'http://localhost:3000/ubications'
+  readonly baseURL = 'https://shrouded-brook-34278.herokuapp.com/ubications'
 
   constructor(private http : HttpClient) { }
 

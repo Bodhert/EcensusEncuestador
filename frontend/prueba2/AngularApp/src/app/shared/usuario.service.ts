@@ -19,8 +19,8 @@ export class UsuarioService {
 
   selectUsuario: Usuario;
   usuarios: Usuario[];
-  readonly baseURL = 'http://localhost:3000/ubications'
-  readonly baseURLpersona = 'http://localhost:3000/ubications'
+  readonly baseURL = 'https://shrouded-brook-34278.herokuapp.com/ubications'
+  readonly baseURLpersona = 'https://shrouded-brook-34278.herokuapp.com/ubications'
 
   constructor(private http : HttpClient) { }
  // constructor() { }
