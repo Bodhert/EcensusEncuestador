@@ -9,6 +9,8 @@
 
 
             <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="usuarioService.selectUsuario._id">
+
+            
              <div class="row">
                 <div class="input-field col s12">
                 <!-- required utiliza el css input.ng-invalid .ng.dirty  (click)="onBrake()"-->
@@ -36,7 +38,6 @@
                 <div class="input-field col s12">
                         <button class="btn btn-custom right" type="button" (click)="resetForm(usuarioForm)">Reset</button>
                         <button class="btn btn-custom right" type="button" [disabled]="!usuarioForm.valid">Submit1</button>
-                        <button class="btn btn-custom right" onCLick="window.location.href='/pagina'">hola</button>
                         <a class="action-btn" (click)="onEdit(usr)">
                       <i class="material-icons">edit</i>
                   </a>
